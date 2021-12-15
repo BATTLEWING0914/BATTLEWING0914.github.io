@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <h2>餐飲調查</h2>
+        <p>姓名:<input type="text"</p>
+        <p>性別:
+            <select>
+                <option selected>男</option>
+                <option>女</option>
+            </select>
+        </p>
+        <p>勝利日期:<input type="date"</p>
+    </form>
+    <table border="1px">
+        <thead><td></td><td>十分不滿意</td><td>不滿意</td><td>一般</td><td>滿意</td><td>十分滿意</td></thead>
+        <tr>
+            <td>送餐速度</td>
+            <td><input type="radio" name="radio1" value="1"></td>
+            <td><input type="radio" name="radio1" value="2"></td>
+            <td><input type="radio" name="radio1" value="3"></td>
+            <td><input type="radio" name="radio1" value="4"></td>
+            <td><input type="radio" name="radio1" value="5"></td>
+        </tr>
+        <tr>
+            <td>食物味道</td>
+            <td><input type="radio" name="radio2" value="1"></td>
+            <td><input type="radio" name="radio2" value="2"></td>
+            <td><input type="radio" name="radio2" value="3"></td>
+            <td><input type="radio" name="radio2" value="4"></td>
+            <td><input type="radio" name="radio2" value="5"></td>
+        </tr>
+    </table>
+    <p>喜愛的顏色：<input type="color"></p>
+    <p>
+        給一下餐單打分：<Br>
+            <ol type="A">
+                <li>
+                    <ul>
+                        <li>巨無霸</li>
+                        <li>可樂</li>
+                        <li>薯條</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>雞腿堡</li>
+                        <li>可樂</li>
+                        <li>薯條</li></ul>
+                </li>
+            </ol><br>
+            A餐的打分: 0<input type="range" name="" min="0" max="10" step="1" value="5">10分<br>
+            B餐的打分: <input type="number" name="" min="0" max="10" step="1" value="5">分
+    </p>
+    <p>
+        從哪裡得到優惠資訊:(可多選) <br>
+        <input type="checkbox"> Facebook<br>
+        <input type="checkbox"> 官網<br>
+        <input type="checkbox"> 朋友或家人<br>
+        <input type="checkbox"> 報紙<br>
+        <input type="checkbox"> 其他: <input type="text">
+</p>
+    <input type="submit" value="提交問卷">
+</body>
+</html>
