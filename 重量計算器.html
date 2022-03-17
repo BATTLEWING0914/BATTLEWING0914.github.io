@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.2.31"></script>
+</head>
+<body>
+    <div id="t">
+        重量單位轉換<br>
+        <input type="text" v-model="n">
+        <select v-model="selected">
+         <option value="g">克(g)</option>
+         <option value="kg">千克(kg)</option>
+         <option value="j">斤</option>
+         <option value="l">兩</option>
+        </select>
+        <br>
+        {{ g }}克(g)<br>
+        {{ kg }}千克(kg)<br>
+        {{ j }}斤<br>
+        {{ l }}兩
+    </div>     
+    <script>
+        const t = {
+            data() {
+                return {
+                    selected: 'g',
+                        n: 1,
+                        g: 1,
+                        kg: 1,
+                        j: 1,
+                        l: 1,
+      }
+    },
+    watch: {
+        n:function(val){
+        if(this.selected=='g'){
+          this.g= this.n
+        }
+        if(this.selected=='kg'){
+          this.g= this.n*1000
+        }
+        if(this.selected=='j'){
+          this.g= this.n*600
+        }
+        if(this.selected=='l'){
+          this.g= this.n*600/16
+        }
+        this.kg= this.g/1000
+        this.j= this.g/600
+        this.l= this.j*16
+      },
+      selected:function(){
+        if(this.selected=='g'){
+          this.g= this.n
+        }
+        if(this.selected=='kg'){
+          this.g= this.n*1000
+        }
+        if(this.selected=='j'){
+          this.g= this.n*600
+        }
+        if(this.selected=='l'){
+          this.g= this.n*600/16
+        }
+        this.kg= this.g/1000
+        this.j= this.g/600
+        this.l= this.j*16          
+      }
+    }
+  }
+    Vue.createApp(t).mount('#t')
+    </script>
+</body>
+</html>
